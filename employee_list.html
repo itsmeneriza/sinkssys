@@ -73,8 +73,8 @@
       </tbody>
     </table>
 
-     <div id="employeelist-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-hidden overflow-x-auto fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-400 bg-opacity-50">
-      <div class="p-8 flex justify-center">
+    <div id="employeelist-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-hidden overflow-x-auto fixed top-0 right-0 left-0 z-50 flex justify-center items-center max-h-full bg-gray-400 h-[calc(100%-1rem)] bg-opacity-50">
+      <div class="p-8 flex overflow-x-auto">
         <table class="bg-white table-auto">
           <thead class="bg-pink-500">
             <tr>
@@ -142,7 +142,7 @@
           </tbody>
         </table>
         <!-- Close button -->
-        <button class="block text-white bg-gray-400 hover:bg-orange-700 text-white font-bold py-2 px-4 cursor-pointer" tabindex="0" onclick="document.getElementById('employeelist-modal').classList.toggle('hidden')">
+        <button class="block text-white bg-gray-400 hover:bg-orange-700 text-white font-bold py-2 px-4 cursor-pointer" tabindex="-1" onclick="document.getElementById('employeelist-modal').classList.toggle('hidden')">
           Close
         </button>
       </div>
