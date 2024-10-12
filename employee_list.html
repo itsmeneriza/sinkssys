@@ -7,11 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="p-8 ">
-  <div class="flex justify-center">
-    <table class="table-auto">
-      <thead class="bg-pink-500">
-        <tr>
+<body class="grid-rows-2 min-h-screen">
+  <header class="p-8 bg-pink-100">
+    <h1 class="text-center text-4xl font-bold text-pink-600">Sinks R Us</h1>
+  </header>
+
+  <section class="relative bg-white p-8 flex items-center justify-center whitespace-nowrap">
+    <div class="overflow-x-auto">
+      <table class="table-auto">
+        <thead class="bg-pink-500">
+        <tr class>
           <th class="px-4 py-2">Name</th>
           <th class="px-4 py-2">Job Title</th>
           <th class="px-4 py-2">Department</th>
@@ -28,7 +33,7 @@
           <td class="px-4 py-2">ivan.petrov@sinksrus.com</td>
           <td class="px-4 py-2">
             <!-- Modal toggle -->
-            <button class="block text-white bg-pink-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded cursor-pointer" tabindex="0" onclick="document.getElementById('static-modal').classList.toggle('hidden')">
+            <button class="block text-white bg-pink-500 hover:bg-gray-400 text-white font-bold py-1 px-3 rounded cursor-pointer" tabindex="0" onclick="document.getElementById('employeelist-modal').classList.toggle('hidden')">
               Extend
             </button>
           </td>
@@ -65,85 +70,83 @@
           <td class="px-4 py-2">emma@sinksrus.com</td>
           <td class="px-4 py-2"></td>
         </tr>
-      
       </tbody>
     </table>
-  </div>
-  <!-- Modal -->
-  <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="bg-white p-8 flex justify-center">
-      <table class="table-auto">
-        <thead class="bg-pink-500">
-          <tr>
-            <th class="px-4 py-2">Name</th>
-            <th class="px-4 py-2">Job Title</th>
-            <th class="px-4 py-2">Department</th>
-            <th class="px-4 py-2">Email</th>
-            <th class="px-4 py-2">Contact</th>
-            <th class="px-4 py-2">Address</th>
-            <th class="px-4 py-2">Sex</th>
-            <th class="px-4 py-2">Marital Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="hover:bg-gray-100">
-            <td class="px-4 py-2">Ivan Petrov</td>
-            <td class="px-4 py-2">Software Engineer</td>
-            <td class="px-4 py-2">IT</td>
-            <td class="px-4 py-2">ivan.petrov@sinksrus.com</td>
-            <td class="px-4 py-2">555-6789</td>
-            <td class="px-4 py-2">12 Red Square, Moscow</td>
-            <td class="px-4 py-2">male</td>
-            <td class="px-4 py-2">Single</td>
-          </tr>
-          <tr class="hover:bg-gray-100">
-            <td class="px-4 py-2">Pedro Los Baños</td>
-            <td class="px-4 py-2">Marketing Manager</td>
-            <td class="px-4 py-2">Manager</td>
-            <td class="px-4 py-2">pedro_los_banos@sinksrus.com</td>
-            <td class="px-4 py-2"></td>
-            <td class="px-4 py-2">123 Mabini St</td>
-            <td class="px-4 py-2">male</td>
-            <td class="px-4 py-2">Married</td>
-          </tr>
-          <tr class="hover:bg-gray-100">
-            <td class="px-4 py-2">Ana Gómez</td>
-            <td class="px-4 py-2">HR Specialist</td>
-            <td class="px-4 py-2">HR</td>
-            <td class="px-4 py-2">ana.gomez@sinksrus.com</td>
-            <td class="px-4 py-2">555-1526</td>
-            <td class="px-4 py-2"></td>
-            <td class="px-4 py-2">F</td>
-            <td class="px-4 py-2">Divorced</td>
-          </tr>
-          <tr class="hover:bg-gray-100">
-            <td class="px-4 py-2">John Wu</td>
-            <td class="px-4 py-2">Sales Associate</td>
-            <td class="px-4 py-2">Sales</td>
-            <td class="px-4 py-2">john.wu@sinksrus.com</td>
-            <td class="px-4 py-2">555-6925</td>
-            <td class="px-4 py-2">456 Rizal St</td>
-            <td class="px-4 py-2">male</td>
-            <td class="px-4 py-2">Single</td>
-          </tr>
-          <tr class="hover:bg-gray-100">
-            <td class="px-4 py-2">Emma Wilson</td>
-            <td class="px-4 py-2">CEO</td>
-            <td class="px-4 py-2">Admin</td>
-            <td class="px-4 py-2">emma@sinksrus.com</td>
-            <td class="px-4 py-2">555-1111 </td>
-            <td class="px-4 py-2"></td>
-            <td class="px-4 py-2">female</td>
-            <td class="px-4 py-2">Married</td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Close button -->
-      <button class="block text-white bg-gray-400 hover:bg-orange-700 text-white font-bold py-2 px-4 cursor-pointer" tabindex="0" onclick="document.getElementById('static-modal').classList.toggle('hidden')">
-        Close
-      </button>
-    </div>
-  </div>
 
+     <div id="employeelist-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-hidden overflow-x-auto fixed top-0 right-0 left-0 z-50 flex justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-400 bg-opacity-50">
+      <div class="p-8 flex justify-center">
+        <table class="bg-white table-auto">
+          <thead class="bg-pink-500">
+            <tr>
+              <th class="px-4 py-2">Name</th>
+              <th class="px-4 py-2">Job Title</th>
+              <th class="px-4 py-2">Department</th>
+              <th class="px-4 py-2">Email</th>
+              <th class="px-4 py-2">Contact</th>
+              <th class="px-4 py-2">Address</th>
+              <th class="px-4 py-2">Sex</th>
+              <th class="px-4 py-2">Marital Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-2">Ivan Petrov</td>
+              <td class="px-4 py-2">Software Engineer</td>
+              <td class="px-4 py-2">IT</td>
+              <td class="px-4 py-2">ivan.petrov@sinksrus.com</td>
+              <td class="px-4 py-2">555-6789</td>
+              <td class="px-4 py-2">12 Red Square, Moscow</td>
+              <td class="px-4 py-2">male</td>
+              <td class="px-4 py-2">Single</td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-2">Pedro Los Baños</td>
+              <td class="px-4 py-2">Marketing Manager</td>
+              <td class="px-4 py-2">Manager</td>
+              <td class="px-4 py-2">pedro_los_banos@sinksrus.com</td>
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2">123 Mabini St</td>
+              <td class="px-4 py-2">male</td>
+              <td class="px-4 py-2">Married</td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-2">Ana Gómez</td>
+              <td class="px-4 py-2">HR Specialist</td>
+              <td class="px-4 py-2">HR</td>
+              <td class="px-4 py-2">ana.gomez@sinksrus.com</td>
+              <td class="px-4 py-2">555-1526</td>
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2">F</td>
+              <td class="px-4 py-2">Divorced</td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-2">John Wu</td>
+              <td class="px-4 py-2">Sales Associate</td>
+              <td class="px-4 py-2">Sales</td>
+              <td class="px-4 py-2">john.wu@sinksrus.com</td>
+              <td class="px-4 py-2">555-6925</td>
+              <td class="px-4 py-2">456 Rizal St</td>
+              <td class="px-4 py-2">male</td>
+              <td class="px-4 py-2">Single</td>
+            </tr>
+            <tr class="hover:bg-gray-100">
+              <td class="px-4 py-2">Emma Wilson</td>
+              <td class="px-4 py-2">CEO</td>
+              <td class="px-4 py-2">Admin</td>
+              <td class="px-4 py-2">emma@sinksrus.com</td>
+              <td class="px-4 py-2">555-1111 </td>
+              <td class="px-4 py-2"></td>
+              <td class="px-4 py-2">female</td>
+              <td class="px-4 py-2">Married</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Close button -->
+        <button class="block text-white bg-gray-400 hover:bg-orange-700 text-white font-bold py-2 px-4 cursor-pointer" tabindex="0" onclick="document.getElementById('employeelist-modal').classList.toggle('hidden')">
+          Close
+        </button>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
